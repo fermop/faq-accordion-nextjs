@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Mentor - FAQ accordion solution
 
-## Getting Started
+This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+![Sample GIF](./sample.gif)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Hide/Show the answer to a question when the question is clicked
+- Navigate the questions and hide/show answers using keyboard navigation alone
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Screenshot
+
+📱 Mobile
+
+![Mobile](./mobile.png)
+
+💻 Desktop
+
+![Desktop](./desktop.png)
+
+### Links
+
+- Solution URL: []()
+- Live Site URL: [https://fermop-faq-accordion-nextjs.vercel.app/](https://fermop-faq-accordion-nextjs.vercel.app/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties (Tailwind v4 Theme)
+    - Flexbox
+    - Tailwind CSS - For styling
+- Mobile-first workflow
+- [React](https://es.react.dev/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Shadcn](https://ui.shadcn.com/docs/components/radix/accordion) - Accordion Component (type="multiple")
+
+### What I learned
+
+### What I learned
+
+This project was my first time working with **shadcn/ui** components and integrating them into a Next.js environment with Tailwind CSS.
+
+One of the main challenges was customizing the `Accordion` component to replace the default chevron icon with the specific Plus (+) and Minus (-) icons required by the design, and making them toggle based on the open/closed state.
+
+I learned how to use Tailwind's `group` and `data-attributes` to style children elements based on their parent's state:
+
+```tsx
+/* src/components/ui/accordion.tsx */
+<AccordionPrimitive.Trigger
+  className="flex ... group" // Added 'group' to the parent
+>
+  {children}
+  <div className="shrink-0">
+    {/* Using group-data-[state=open] to toggle visibility */}
+    <Image 
+      src="/assets/images/icon-plus.svg" 
+      className="block group-data-[state=open]:hidden" 
+    />
+    <Image 
+      src="/assets/images/icon-minus.svg" 
+      className="hidden group-data-[state=open]:block" 
+    />
+  </div>
+</AccordionPrimitive.Trigger>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Useful resources
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Shadcn](https://ui.shadcn.com) - This library helped me manage the logic for the accordion component.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Author
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Frontend Mentor - [@fermop](https://www.frontendmentor.io/profile/fermop)
+- Linkedin - [Fernando Pérez Mojica](www.linkedin.com/in/fernando-pérez-mojica-71b28a361)

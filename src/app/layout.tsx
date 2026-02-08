@@ -9,7 +9,7 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | FAQ Accordion with Next.js",
-  description: "",
+  description: "Frontend Mentor's frequent questions!",
 };
 
 export default function RootLayout({
@@ -20,7 +20,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} font-work-sans antialiased`}
+        className={`
+          min-h-dvh
+          ${workSans.variable} 
+          font-work-sans 
+          antialiased
+          bg-primary-purple-100
+          bg-[url(/assets/images/background-pattern-mobile.svg)] 
+          md:bg-[url(/assets/images/background-pattern-desktop.svg)]
+          bg-no-repeat 
+          bg-top 
+          bg-[length:100%_auto]
+          flex flex-col items-center justify-center
+          p-6
+        `}
       >
         {children}
       </body>
