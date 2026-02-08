@@ -29,17 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-📱 Mobile
+📱 Preview 💻
 
-![Mobile](./mobile.png)
-
-💻 Desktop
-
-![Desktop](./desktop.png)
+![Preview](./preview.png)
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion---nextjs-tailwind-shadcn-WXqAy25ymf](https://www.frontendmentor.io/solutions/faq-accordion---nextjs-tailwind-shadcn-WXqAy25ymf)
 - Live Site URL: [https://fermop-faq-accordion-nextjs.vercel.app/](https://fermop-faq-accordion-nextjs.vercel.app/)
 
 ## My process
