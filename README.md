@@ -53,8 +53,6 @@ Users should be able to:
 
 ### What I learned
 
-### What I learned
-
 This project was my first time working with **shadcn/ui** components and integrating them into a Next.js environment with Tailwind CSS.
 
 One of the main challenges was customizing the `Accordion` component to replace the default chevron icon with the specific Plus (+) and Minus (-) icons required by the design, and making them toggle based on the open/closed state.
